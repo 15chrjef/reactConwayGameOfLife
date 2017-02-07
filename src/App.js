@@ -36,7 +36,6 @@ class App extends Component {
     ))
   }
   generateNeighborObject(i, j, board) {
-    // console.log('i',i, 'j', j, board)
     return {
       top: i-1>-1 && board[i-1][j],
       topRight: i-1>-1 && j < 49 && board[i-1][j+1],
@@ -70,7 +69,6 @@ class App extends Component {
         board = this.cycleCell(i,j, board);
       }
     }
-    // console.log(board)
     this.setState({ board },
       () => setTimeout(this.cycleBoard, 200)
     );
